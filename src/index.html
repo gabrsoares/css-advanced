@@ -4,89 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framework Simulator</title>
+    <title>Games Store</title>
 </head>
 <body>
     <div id="root">
         <header>
             <div class="container">
-                <h2>Logo</h2>
-                <nav>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#produtos">Produtos</a>
-                    <a href="#contato">Contato</a>
+                <h1>Games Store</h1>
+                <nav class="navigation">
+                    <a class="navigation__item" href="#sobre">Sobre</a>
+                    <a class="navigation__item" href="#produtos">Produtos</a>
+                    <a class="navigation__item" href="#contato">Cadastre-se</a>
                 </nav>
             </div>
         </header>
         <section id="sobre">
             <div class="container">
-                <aside>
-                    <div id="localizacao"></div>
-                </aside>
-                <article>
-                    <h1>Sobre nós</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor repellat aliquid laborum libero harum omnis, nostrum itaque suscipit labore ut odio dolorum non voluptates deserunt nulla fuga laudantium doloremque beatae.</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor repellat aliquid laborum libero harum omnis, nostrum itaque suscipit labore ut odio dolorum non voluptates deserunt nulla fuga laudantium doloremque beatae.</p>
-                </article>
             </div>
         </section>
         <section id="produtos">
             <div class="container">
-                <h1>Catálogo</h1>
+                <h2>Catálogo</h2>
                 <div class="vitrine">
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 1</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">God of War</h3>
+                        <img class="vitrine__image" src="./assets/img/gow.png" alt="god of war"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 2</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">FIFA 22</h3>
+                        <img class="vitrine__image" src="./assets/img/fifa.png" alt="fifa 22"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 3</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">Grand Turismo 7</h3>
+                        <img class="vitrine__image" src="./assets/img/gt7.png" alt="grand turismo 7"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 4</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">Jurassic World 2</h3>
+                        <img class="vitrine__image" src="./assets/img/jw2.png" alt="jurassic world 2"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 5</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">Call of Duty Modern Warfare 2</h3>
+                        <img class="vitrine__image" src="./assets/img/mw2.png" alt="call of duty mw2"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                     <div class="vitrine__item">
-                        <h3 class="vitrine__produto">Produto 6</h3>
-                        <div class="vitrine__image"></div>
+                        <h3 class="vitrine__produto">Resident Evil Village</h3>
+                        <img class="vitrine__image" src="./assets/img/resident-evil.png" alt="resident evil village"></img>
+                        <p class="vitrine__desc"></p>
+                        <a href="" class="vitrine__button">Ver detalhes</a>
+                    </div>
+                    <div class="vitrine__item">
+                        <h3 class="vitrine__produto">Spiderman Miles Morales</h3>
+                        <img class="vitrine__image" src="./assets/img/spiderman.png" alt="spiderman miles morales"></img>
+                        <p class="vitrine__desc"></p>
+                        <a href="" class="vitrine__button">Ver detalhes</a>
+                    </div>
+                    <div class="vitrine__item">
+                        <h3 class="vitrine__produto">Stray</h3>
+                        <img class="vitrine__image" src="./assets/img/stray.png" alt="stray"></img>
                         <p class="vitrine__desc"></p>
                         <a href="" class="vitrine__button">Ver detalhes</a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contato">
+        <section id="cadastro">
             <div class="container">
-                <h1>Contato</h1>
-                <form class="contato">
-                    <input type="text" placeholder="Nome" class="contato__input">
-                    <input type="text" placeholder="Email" class="contato__input">
-                    <button class="contato__button">Enviar</button>
+                <h2>Cadastro</h2>
+                <p><strong>Cadastre-se abaixo para receber novidades e cupons!</strong> </p>
+                <form class="cadastro">
+                    <input type="text" placeholder="Nome" class="cadastro__input">
+                    <input type="text" placeholder="Email" class="cadastro__input">
+                    <button class="cadastro__button">Cadastrar</button>
                 </form>
             </div>
         </section>
         <footer>
             <div class="container">
-                <p>Loja x &copy; Todos os direitos reservados. <br>
-                <small>Desenvolvido por Gabriel Soares</small></p>
+                <p>Games Store &copy; Todos os direitos reservados. <br>
+                <small>Desenvolvido por Gabriel</small></p>
             </div>
         </footer>
     </div>

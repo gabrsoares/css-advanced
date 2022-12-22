@@ -1,29 +1,41 @@
-$color-font: #33d ;
-$color-bg-default: #a9f;
-$color-bg-boxes: #FD3;
+$color-primary: #fff;
+$color-secondary: #f58220;
+$font-color-primary: #000;
+$font-color-secondary: #454545;
 $font-default: Arial, Helvetica, sans-serif;
 $font-size-default: 1.6rem;
+
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 html {
     font-size: 62.5%;
 }
 
 body {
-    background-color: $color-bg-default;
+    background-color: $color-primary;
     font-family: $font-default;
 }
 
 h1 {
-    color: $color-font;
-    text-align: center;
-    margin-top: 4rem;
+    color: $font-color-primary;
+    font-family: 'bebas', sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
 }
 
 h2 {
-    margin-top: 4rem;
+    font-size: 3rem;
+    margin: 2rem 0;
 }
 
-header,section,footer {
+header,
+section,
+footer {
     display: block;
     float: left;
     width: 100%;
@@ -36,8 +48,172 @@ header,section,footer {
     max-width: 90vw;
 }
 
+header {
+    .container {
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem auto;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+
+        &__item {
+            text-decoration: none;
+            color: $font-color-primary;
+            font-size: 1.6rem;
+
+            &:hover {
+                border-bottom: 1px solid $font-color-primary;
+            }
+        }
+    }
+}
+
 #sobre {
-    background-color: white;
+    .container{
+        background-image: url(../assets/img/loja-bg.jpg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40vw;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+#produtos {
+    .container {
+        margin-bottom: 2rem;
+    }
+}
+
+#cadastro {
+    .container {
+        margin-bottom: 2rem;
+        background-color: #f2f2f5;
+        width: 70vw;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+
+        p {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .cadastro {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 2rem;
+
+            &__input {
+                height: 3rem;
+                width: 30%;
+                margin-right: 2rem;
+                border: 1px solid #000;
+                border-radius: .5rem;
+                padding-left: 1rem;
+            }
+
+            &__button {
+                height: 3rem;
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: .5rem;
+                font-size: 1.6rem;
+                cursor: pointer;
+                padding: 0 1rem;
+
+                &:hover {
+                    box-shadow: 0 0 2px 2px $color-secondary;
+                }
+            }
+        }
+    }
 }
 
 @import 'vitrine';
+@import 'footer';
+
+@media (max-width: 900px) {
+    header {
+        .container {
+            .navigation {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    header {
+        .container {
+            flex-flow: column;
+            justify-content: space-around;
+            width: 100%;
+            
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+    }
+    
+    #sobre {
+        .container {
+            height: 20vh;
+            max-height: 40vh;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #cadastro {
+        .container {
+            width: 100vw;
+
+            p {
+                text-align: center;
+            }
+
+            .cadastro {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+
+                &__input {
+                    width: 80%;
+                    margin-right: 0;
+                    height: 3rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    header {
+        .container {
+            display: flex;
+            flex-direction: column;
+            .navigation {
+                width: 100%;
+                margin: 2rem 0;
+            }
+        }
+    }
+}
